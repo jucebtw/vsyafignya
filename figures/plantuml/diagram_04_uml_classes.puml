@@ -1,0 +1,58 @@
+@startuml diagram_04_uml_classes
+title UML. Диаграмма классов (фрагмент предметной области склада)
+
+skinparam shadowing false
+skinparam class {
+  BackgroundColor #F8F8F8
+  BorderColor #111111
+  FontName "Times New Roman"
+  FontSize 12
+}
+skinparam ArrowColor #111111
+
+class Material {
+  + material_id : int
+  + name : string
+  + sku : string
+  + unit : string
+}
+
+class Location {
+  + location_id : int
+  + code : string
+  + warehouse_id : int
+}
+
+class Stock {
+  + stock_id : int
+  + quantity  : decimal
+}
+
+class Inbound {
+  + inbound_id : int
+  + date : date
+  + qty : decimal
+  + material_id : int
+  + location_id : int
+}
+
+class Outbound {
+  + outbound_id : int
+  + date : date
+  + qty : decimal
+  + material_id : int
+  + location_id : int
+}
+
+Material "1" -- "*" Stock : учёт >
+Location "1" -- "*" Stock : размещение >
+Material "1" -- "*" Inbound
+Location "1" -- "*" Inbound
+Material "1" -- "*" Outbound
+Location "1" -- "*" Outbound
+
+note bottom of Stock
+  Остаток задаёт пару «номенклатура + ячейка»;
+  приход/расход оформляется сущностями Inbound / Outbound.
+end note
+@enduml

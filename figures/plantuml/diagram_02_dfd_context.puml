@@ -1,0 +1,36 @@
+@startuml diagram_02_dfd_context
+title DFD. Контекстная диаграмма (уровень 0)
+
+skinparam shadowing false
+skinparam rectangle<<entity>> {
+  BackgroundColor #FFF8E6
+  BorderColor #111111
+}
+skinparam usecase {
+  BackgroundColor #E8F4FC
+  BorderColor #111111
+  FontName "Times New Roman"
+}
+skinparam ArrowColor #333333
+
+left to right direction
+
+rectangle "Поставщик\n(документы поставки)" <<entity>> as SUP
+rectangle "Производство\n(заявки на материалы)" <<entity>> as MFG
+rectangle "Бухгалтерия\n(при интеграции)" <<entity>> as ACC
+rectangle "Пользователь\n(кладовщик / менеджер)" <<entity>> as USR
+
+usecase "**0**\nСкладской\nучёт" as P0
+
+SUP --> P0 : Накладные,\nноменклатура
+MFG --> P0 : Заявки на\nматериалы
+USR --> P0 : Запросы,\nподтверждения
+P0 --> USR : Отчёты,\nсводки
+ACC <-> P0 : Обмен\nпо остаткам
+P0 --> MFG : Подтверждение\nопераций / выдача
+
+note bottom
+  Один контур **0** объединяет внешних участников и автоматизируемый
+  центральный процесс — складской учёт в ИС.
+end note
+@enduml

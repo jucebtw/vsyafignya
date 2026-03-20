@@ -1,0 +1,34 @@
+@startuml diagram_01_idef0_A0
+title IDEF0. Контекстная диаграмма A-0: «Управление складскими запасами»
+
+skinparam shadowing false
+skinparam ArrowColor #222222
+skinparam rectangle {
+  BackgroundColor #F5F5F5
+  BorderColor #111111
+  roundCorner 8
+  FontName "Times New Roman"
+}
+
+' Управление сверху, механизмы снизу — как в IDEF0
+rectangle "**Управление (Control)**\nнормативы предприятия,\nполитика запасов, приказы руководства" as CTRL
+
+rectangle "**A0**\nУправление складскими запасами" as A0
+
+rectangle "**Механизмы (Mechanism)**\nперсонал склада, ПК, СУБД MS SQL Server,\nПО Avalonia/.NET" as MECH
+
+rectangle "**Входы (Input)**\nнакладные, заявки,\nакты перемещения" as INP
+
+rectangle "**Выходы (Output)**\nостатки, журналы,\nотчёты" as OUT
+
+CTRL -down-> A0
+MECH -up-> A0
+INP -right-> A0
+A0 -right-> OUT
+
+legend right
+  Далее выполняется декомпозиция A0 → A1…An
+  по типовым процессам IDEF0 (приёмка, отгрузка,
+  инвентаризация, отчёты).
+endlegend
+@enduml
