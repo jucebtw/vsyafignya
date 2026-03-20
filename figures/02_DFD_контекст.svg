@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .t { font: bold 15px "Times New Roman", Times, serif; fill: #111; }
+      .n { font: 13px "Times New Roman", Times, serif; fill: #222; }
+      .s { font: 11px "Times New Roman", Times, serif; fill: #444; }
+      .proc { fill: #e8f4fc; stroke: #000; stroke-width: 2; }
+      .ext { fill: #fff8e6; stroke: #000; stroke-width: 2; }
+      .flow { stroke: #000; stroke-width: 1.5; fill: none; marker-end: url(#arr); }
+    ]]></style>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <polygon points="0 0, 9 4.5, 0 9" fill="#000"/>
+    </marker>
+  </defs>
+  <text x="550" y="34" text-anchor="middle" class="t">DFD. >=B5:AB=0O 4803@0<<0 (C@>25=L 0)</text>
+
+  <!-- Center process -->
+  <circle cx="550" cy="320" r="95" class="proc"/>
+  <text x="550" y="308" text-anchor="middle" class="t">0</text>
+  <text x="550" y="332" text-anchor="middle" class="n">!:;04A:>9</text>
+  <text x="550" y="352" text-anchor="middle" class="n">CGQB</text>
+
+  <!-- External: Supplier -->
+  <rect x="60" y="120" width="140" height="70" class="ext" rx="4"/>
+  <text x="130" y="152" text-anchor="middle" class="n">>AB02I8:</text>
+  <text x="130" y="172" text-anchor="middle" class="s">4>:C<5=BK ?>AB02:8</text>
+  <path d="M 200 155 L 455 280" class="flow"/>
+  <text x="300" y="200" class="s">0:;04=K5, =><5=:;0BC@0</text>
+
+  <!-- External: Production -->
+  <rect x="60" y="420" width="140" height="70" class="ext" rx="4"/>
+  <text x="130" y="452" text-anchor="middle" class="n">@>872>4AB2></text>
+  <text x="130" y="472" text-anchor="middle" class="s">70O2:8 =0 <0B5@80;K</text>
+  <path d="M 200 455 L 460 340" class="flow"/>
+
+  <!-- External: User -->
+  <rect x="900" y="270" width="150" height="80" class="ext" rx="4"/>
+  <text x="975" y="302" text-anchor="middle" class="n">>;L7>20B5;L</text>
+  <text x="975" y="322" text-anchor="middle" class="s">:;04>2I8: /</text>
+  <text x="975" y="338" text-anchor="middle" class="s"><5=5465@</text>
+  <path d="M 900 310 L 645 310" class="flow"/>
+  <text x="760" y="298" class="s">0?@>AK, ?>4B25@645=8O</text>
+
+  <!-- External: Accounting optional -->
+  <rect x="900" y="120" width="150" height="65" class="ext" rx="4"/>
+  <text x="975" y="148" text-anchor="middle" class="n">CE30;B5@8O</text>
+  <text x="975" y="168" text-anchor="middle" class="s">(?@8 8=B53@0F88)</text>
+  <path d="M 900 175 L 630 250" class="flow"/>
+  <text x="780" y="200" class="s">K3@C7:0 >AB0B:>2</text>
+
+  <!-- Flows out -->
+  <path d="M 550 225 L 550 100" class="flow"/>
+  <text x="560" y="115" class="s">BGQBK, A2>4:8</text>
+  <path d="M 645 360 L 900 400" class="flow"/>
+  <text x="750" y="395" class="s">>4B25@645=8O >?5@0F89</text>
+
+  <text x="550" y="600" text-anchor="middle" class="s">=5H=85 ACI=>AB8  8AB>G=8:8/?>;CG0B5;8 40==KE; F5=B@0;L=K9 ?@>F5AA  02B><0B878@>20==0O A8AB5<0 A:;04A:>3> CGQB0.</text>
+</svg>

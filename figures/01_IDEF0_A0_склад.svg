@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .title { font: bold 16px "Times New Roman", Times, serif; fill: #111; }
+      .lbl { font: 13px "Times New Roman", Times, serif; fill: #222; }
+      .small { font: 11px "Times New Roman", Times, serif; fill: #333; }
+      .box { fill: #f5f5f5; stroke: #000; stroke-width: 2; }
+      .arrow { stroke: #000; stroke-width: 1.5; fill: none; marker-end: url(#m); }
+    ]]></style>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#000"/>
+    </marker>
+  </defs>
+  <text x="500" y="36" text-anchor="middle" class="title">IDEF0. >=B5:AB=0O 4803@0<<0 A-0: «#?@02;5=85 A:;04A:8<8 70?0A0<8»</text>
+
+  <!-- Controls (top) -->
+  <rect x="320" y="58" width="360" height="52" class="box" rx="4"/>
+  <text x="500" y="82" text-anchor="middle" class="lbl">#?@02;5=85: @53;0<5=BK CGQB0, ?>;8B8:0 70?0A>2, ?@8:07K @C:>2>4AB20</text>
+  <text x="500" y="100" text-anchor="middle" class="small">(Control)</text>
+  <line x1="500" y1="110" x2="500" y2="168" class="arrow"/>
+
+  <!-- Main function box -->
+  <rect x="340" y="168" width="320" height="100" class="box" rx="6"/>
+  <text x="500" y="218" text-anchor="middle" class="title">A0</text>
+  <text x="500" y="242" text-anchor="middle" class="lbl">#?@02;5=85 A:;04A:8<8 70?0A0<8</text>
+
+  <!-- Inputs left -->
+  <rect x="40" y="188" width="220" height="60" class="box" rx="4"/>
+  <text x="150" y="218" text-anchor="middle" class="lbl">E>4K: =0:;04=K5,</text>
+  <text x="150" y="236" text-anchor="middle" class="lbl">70O2:8, 0:BK ?5@5AGQB0</text>
+  <text x="150" y="256" text-anchor="middle" class="small">(Input)</text>
+  <line x1="260" y1="218" x2="340" y2="218" class="arrow"/>
+
+  <!-- Outputs right -->
+  <line x1="660" y1="218" x2="740" y2="218" class="arrow"/>
+  <rect x="740" y="188" width="220" height="60" class="box" rx="4"/>
+  <text x="850" y="218" text-anchor="middle" class="lbl">KE>4K: >AB0B:8,</text>
+  <text x="850" y="236" text-anchor="middle" class="lbl">6C@=0;K, >BGQBK</text>
+  <text x="850" y="256" text-anchor="middle" class="small">(Output)</text>
+
+  <!-- Mechanisms bottom -->
+  <line x1="500" y1="268" x2="500" y2="330" class="arrow"/>
+  <rect x="300" y="330" width="400" height="56" class="box" rx="4"/>
+  <text x="500" y="358" text-anchor="middle" class="lbl">5E0=87<K: ?5@A>=0; A:;040, , !# MS SQL Server,  Avalonia/.NET</text>
+  <text x="500" y="376" text-anchor="middle" class="small">(Mechanism)</text>
+
+  <text x="500" y="430" text-anchor="middle" class="small">@8<5G0=85: 45:><?>78F8O A0 ’ A1&An 2K?>;=O5BAO =0 A;54CNI8E C@>2=OE IDEF0 (?@8Q<:0, >B3@C7:0, 8=25=B0@870F8O, >BGQBK).</text>
+</svg>

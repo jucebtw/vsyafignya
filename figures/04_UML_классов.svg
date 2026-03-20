@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="700" viewBox="0 0 1100 700">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .t { font: bold 14px "Times New Roman", Times, serif; fill: #111; }
+      .h { font: bold 12px "Times New Roman", Times, serif; fill: #000; }
+      .f { font: 11px "Times New Roman", Times, serif; fill: #222; }
+      .c { fill: #f8f8f8; stroke: #000; stroke-width: 2; }
+      .line { stroke: #000; stroke-width: 1.5; }
+      .assoc { stroke: #000; stroke-width: 1.2; }
+    ]]></style>
+  </defs>
+  <text x="550" y="28" text-anchor="middle" class="t">UML. 803@0<<0 :;0AA>2 (D@03<5=B ?@54<5B=>9 >1;0AB8 A:;040)</text>
+
+  <!-- Material -->
+  <rect x="80" y="80" width="200" height="130" class="c" rx="2"/>
+  <rect x="80" y="80" width="200" height="28" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
+  <text x="180" y="100" text-anchor="middle" class="h">Material</text>
+  <line x1="80" y1="108" x2="280" y2="108" class="line"/>
+  <text x="90" y="128" class="f">+ material_id: int</text>
+  <text x="90" y="146" class="f">+ name: string</text>
+  <text x="90" y="164" class="f">+ sku: string</text>
+  <text x="90" y="182" class="f">+ unit: string</text>
+  <line x1="80" y1="190" x2="280" y2="190" class="line"/>
+
+  <!-- Location -->
+  <rect x="420" y="80" width="200" height="110" class="c" rx="2"/>
+  <rect x="420" y="80" width="200" height="28" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
+  <text x="520" y="100" text-anchor="middle" class="h">Location</text>
+  <line x1="420" y1="108" x2="620" y2="108" class="line"/>
+  <text x="430" y="128" class="f">+ location_id: int</text>
+  <text x="430" y="146" class="f">+ code: string</text>
+  <text x="430" y="164" class="f">+ warehouse_id: int</text>
+  <line x1="420" y1="172" x2="620" y2="172" class="line"/>
+
+  <!-- Stock -->
+  <rect x="240" y="320" width="220" height="110" class="c" rx="2"/>
+  <rect x="240" y="320" width="220" height="28" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
+  <text x="350" y="340" text-anchor="middle" class="h">Stock</text>
+  <line x1="240" y1="348" x2="460" y2="348" class="line"/>
+  <text x="250" y="368" class="f">+ stock_id: int</text>
+  <text x="250" y="386" class="f">+ quantity: decimal</text>
+  <line x1="240" y1="394" x2="460" y2="394" class="line"/>
+
+  <!-- Inbound / Outbound -->
+  <rect x="520" y="300" width="200" height="100" class="c" rx="2"/>
+  <rect x="520" y="300" width="200" height="28" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
+  <text x="620" y="320" text-anchor="middle" class="h">Inbound</text>
+  <line x1="520" y1="328" x2="720" y2="328" class="line"/>
+  <text x="530" y="348" class="f">+ inbound_id, date, qty</text>
+  <text x="530" y="366" class="f">+ material_id, location_id</text>
+
+  <rect x="760" y="300" width="200" height="100" class="c" rx="2"/>
+  <rect x="760" y="300" width="200" height="28" fill="#e0e0e0" stroke="#000" stroke-width="2"/>
+  <text x="860" y="320" text-anchor="middle" class="h">Outbound</text>
+  <line x1="760" y1="328" x2="960" y2="328" class="line"/>
+  <text x="770" y="348" class="f">+ outbound_id, date, qty</text>
+  <text x="770" y="366" class="f">+ material_id, location_id</text>
+
+  <!-- Associations -->
+  <line x1="180" y1="210" x2="300" y2="320" class="assoc"/>
+  <text x="220" y="250" class="f">1</text>
+  <line x1="520" y1="180" x2="400" y2="320" class="assoc"/>
+  <text x="450" y="240" class="f">1</text>
+  <text x="330" y="300" class="f">>AB0B>: 2 OG59:5</text>
+  <line x1="460" y1="375" x2="520" y2="350" class="assoc"/>
+  <line x1="460" y1="375" x2="760" y2="350" class="assoc"/>
+
+  <text x="550" y="660" text-anchor="middle" class="f">!2O78: Material 1  * Stock; Location 1  * Stock; Inbound/Outbound AAK;0NBAO =0 Material 8 Location.</text>
+</svg>
