@@ -8,6 +8,7 @@
 | `diagram_02_dfd_context.puml` | `02_DFD_контекст.png` — DFD уровень 0 |
 | `diagram_03_dfd_level1.puml` | `03_DFD_уровень1.png` — декомпозиция |
 | `diagram_04_uml_classes.puml` | `04_UML_классов.png` — классы предметной области |
+| `diagram_05_architecture_layers.puml` | **нет готового PNG** — трёхуровневая архитектура (подпись вида «рис. … архитектура и взаимодействие уровней») |
 
 **Замечания:**
 

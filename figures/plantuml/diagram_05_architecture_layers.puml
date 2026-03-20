@@ -1,0 +1,45 @@
+@startuml diagram_05_architecture_layers
+title Выбранная архитектура системы и взаимодействие уровней\n(логическая трёхуровневая модель)
+
+skinparam shadowing false
+skinparam ArrowColor #333333
+skinparam rectangle {
+  BackgroundColor #E8F4FC
+  BorderColor #111111
+  roundCorner 6
+}
+skinparam database {
+  BackgroundColor #E6F4EA
+  BorderColor #111111
+}
+
+rectangle "**Уровень представления**\nGUI, валидация ввода,\nотображение отчётов" as L1 <<Presentation>> #F0F7FF
+
+rectangle "**Уровень приложения (бизнес-логика)**\nучёт остатков, приход/расход,\nинвентаризация, права доступа" as L2 <<Application>> #D6EAF8
+
+database "**Уровень данных**\nреляционная СУБД, схема БД,\nхранимые процедуры (при необходимости)" as L3 <<Data>> #E6F4EA
+
+note right of L1
+  Реализация: **Avalonia**, **.NET**
+  (клиентское толстое приложение —
+  уровень логически отделён от БД)
+end note
+
+note right of L2
+  Разбиение на сервисы / модули
+  по функциональным областям
+end note
+
+note right of L3
+  **MS SQL Server**
+  (EF Core / ADO.NET)
+end note
+
+L1 -down-> L2 : вызовы API\nсервисов / команд\n(внутри процесса или через слой абстракции)
+L2 -down-> L3 : **SQL**\nтранзакции, CRUD
+
+legend bottom
+  При **одном исполняемом файле** уровни соответствуют слоям кода
+  (Presentation → Application → Data Access), взаимодействие — через контролируемые интерфейсы.
+endlegend
+@enduml
