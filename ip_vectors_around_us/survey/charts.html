@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"/>
+<title>Survey Charts</title>
+<style>body{font-family:Arial,sans-serif;margin:20px} .card{margin:24px 0} canvas{border:1px solid #ddd}</style>
+</head><body>
+<h1>Опрос «Векторы вокруг нас» — диаграммы</h1>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<div class="card"><h2>Q1. Знаете ли вы, что такое вектор?</h2><canvas id="c_Q1" width="900" height="480"></canvas></div>
+<div class="card"><h2>Q2. Где вы чаще всего встречаете слово «вектор»?</h2><canvas id="c_Q2" width="900" height="480"></canvas></div>
+<div class="card"><h2>Q3. Что обязательно должно быть у векторной величины?</h2><canvas id="c_Q3" width="900" height="480"></canvas></div>
+<div class="card"><h2>Q4. Можно ли считать скорость векторной величиной?</h2><canvas id="c_Q4" width="900" height="480"></canvas></div>
+<div class="card"><h2>Q5. Можно ли считать температуру векторной величиной?</h2><canvas id="c_Q5" width="900" height="480"></canvas></div>
+<div class="card"><h2>Q6. Что такое результирующее перемещение?</h2><canvas id="c_Q6" width="900" height="480"></canvas></div>
+<div class="card"><h2>Q7. Где векторы полезны в жизни?</h2><canvas id="c_Q7" width="900" height="480"></canvas></div>
+<div class="card"><h2>Q8. Хотели бы больше примеров из жизни на уроках математики?</h2><canvas id="c_Q8" width="900" height="480"></canvas></div>
+<script>
+const make=(id,labels,data)=>{new Chart(document.getElementById(id),{type:"bar",data:{labels:labels,datasets:[{label:"Ответы (кол-во)",data:data,backgroundColor:"rgba(54, 162, 235, 0.6)",borderColor:"rgba(54, 162, 235, 1)",borderWidth:1}]},options:{responsive:false,plugins:{legend:{display:true}},scales:{y:{beginAtZero:true,ticks:{precision:0}}}}});};
+make('c_Q1', ['Да', 'Примерно', 'Нет'], [18, 10, 2]);
+make('c_Q2', ['Математика', 'Физика', 'Комп. графика', 'Медицина', 'Не встречаю'], [17, 6, 3, 2, 2]);
+make('c_Q3', ['Только величина', 'Только направление', 'Величина и направление', 'Не знаю'], [1, 0, 27, 2]);
+make('c_Q4', ['Да', 'Нет', 'Не уверен(а)'], [23, 2, 5]);
+make('c_Q5', ['Да', 'Нет', 'Не уверен(а)'], [3, 21, 6]);
+make('c_Q6', ['Сумма расстояний', 'Вектор от начала к концу', 'Среднее', 'Не знаю'], [6, 21, 1, 2]);
+make('c_Q7', ['Навигация', 'Спорт', 'Техника', 'Комп. технологии', 'Везде'], [6, 3, 4, 3, 14]);
+make('c_Q8', ['Да', 'Нет', 'Иногда'], [22, 1, 7]);
+</script></body></html>
